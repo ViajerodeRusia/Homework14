@@ -1,0 +1,28 @@
+<html>
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="fullName" placeholder="New employee" />
+        <input type="text" name="tag" placeholder="Tag">
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>Employee to delete</div>
+<form method="post" action="delete">
+    <input type="text" name="delete" placeholder="Tag">
+    <button type="submit">Delete</button>
+</form>
+<div>List of employees</div>
+<form method="post" action="filter">
+    <input type="text" name="filter" placeholder="Tag">
+    <button type="submit">Search</button>
+</form>
+{{#employees}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{fullName}}</span>
+        <i>{{tag}}</i>
+    </div>
+{{/employees}}
+</body>
+</html>
